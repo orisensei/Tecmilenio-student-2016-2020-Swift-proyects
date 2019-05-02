@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hmf-Yo-mKF">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Colección de Números-->
+        <scene sceneID="qwC-IU-75W">
+            <objects>
+                <collectionViewController title="Colección de Números" id="vqp-XK-4Eu" customClass="ColeccionVC" customModule="Coleccion" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ERd-C8-L42">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xIC-6f-GVd">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="20"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="celda" id="q4I-uA-clw" customClass="Celda" customModule="Coleccion" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="879-DR-M40">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="879-DR-M40" firstAttribute="centerX" secondItem="q4I-uA-clw" secondAttribute="centerX" id="71W-5S-HBk"/>
+                                    <constraint firstItem="879-DR-M40" firstAttribute="top" secondItem="q4I-uA-clw" secondAttribute="top" id="I4p-wy-Eqw"/>
+                                    <constraint firstItem="879-DR-M40" firstAttribute="leading" secondItem="q4I-uA-clw" secondAttribute="leading" id="M4v-XC-WPg"/>
+                                    <constraint firstAttribute="trailing" secondItem="879-DR-M40" secondAttribute="trailing" id="sGq-kw-L3K"/>
+                                    <constraint firstItem="879-DR-M40" firstAttribute="centerY" secondItem="q4I-uA-clw" secondAttribute="centerY" id="sb9-1U-jEb"/>
+                                    <constraint firstAttribute="bottom" secondItem="879-DR-M40" secondAttribute="bottom" id="y1g-4c-I2s"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="879-DR-M40"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="71W-5S-HBk"/>
+                                        <exclude reference="I4p-wy-Eqw"/>
+                                        <exclude reference="M4v-XC-WPg"/>
+                                        <exclude reference="sGq-kw-L3K"/>
+                                        <exclude reference="sb9-1U-jEb"/>
+                                        <exclude reference="y1g-4c-I2s"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="879-DR-M40"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="71W-5S-HBk"/>
+                                        <include reference="I4p-wy-Eqw"/>
+                                        <include reference="M4v-XC-WPg"/>
+                                        <include reference="sGq-kw-L3K"/>
+                                        <include reference="sb9-1U-jEb"/>
+                                        <include reference="y1g-4c-I2s"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="imagenNum" destination="879-DR-M40" id="NXD-Vx-1jz"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="margentop" id="ojS-l6-cvL">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="vqp-XK-4Eu" id="O5D-cl-ROY"/>
+                            <outlet property="delegate" destination="vqp-XK-4Eu" id="bdR-Ej-mS6"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Item" id="s5e-Jd-ihH"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8WG-14-ohF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1700.625" y="276.76056338028167"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Xix-mB-V9n">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hmf-Yo-mKF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="lL5-xb-b1f">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vqp-XK-4Eu" kind="relationship" relationship="viewControllers" id="qKi-HF-V6f"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d9i-Za-fWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783" y="277"/>
+        </scene>
+    </scenes>
+</document>
